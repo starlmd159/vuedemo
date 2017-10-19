@@ -11,7 +11,7 @@
     <div id="list">
       <h3>评论列表</h3>
       <p class="p"></p>
-      <div v-for="(item,index) in list">
+      <div v-for="(item,index) in list" :key="index">
         <div class="title">
           <span>第{{index + 1}}楼:</span>
           <span>用户：{{item.user_name}}</span>

@@ -1,11 +1,12 @@
 <template>
   <div id='tmpl'>
     <!--实现导航区域-->
-    <mt-swipe :auto="3000">
+    <!-- <mt-swipe :auto="3000">
       <mt-swipe-item v-for='item in list' :key='item.id'>
         <img :src='item.img'>
       </mt-swipe-item>
-    </mt-swipe>
+    </mt-swipe> -->
+    <silder :imgs="list"></silder>
     <!--实现九宫格-->
     <div class="mui-content">
       <ul class="mui-table-view mui-grid-view mui-grid-9">
@@ -52,8 +53,12 @@
 
 <script>
   import {Toast} from 'mint-ui';
+  import silder from './subcom/silder';
   export default {
     name: 'home',
+    components:{
+			silder
+		},
     data() {
       return {
         msg: 'Welcome to Your Vue.js App',
@@ -79,15 +84,6 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  .mint-swipe {
-    width: 100%;
-    height: 195px;
-  }
-
-  .mint-swipe img {
-    width: 100%;
-    height: 100%;
-  }
 
   mui-content > .mui-table-view:first-child {
     margin-top: 0px;

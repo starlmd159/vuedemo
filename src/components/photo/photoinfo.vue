@@ -13,9 +13,8 @@
       <!--缩略图-->
       <div class="mui-content">
         <ul class="mui-table-view mui-grid-view mui-grid-9">
-          <li  v-for="(item, index) in list" class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
-            <img class="preview-img"  :src="item.src" height="100" @click="$preview.open(index, list)"
-                 >
+          <li v-for="(item, index) in list" :key="index" class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+            <img class="preview-img"  :src="item.src" height="100" @click="$preview.open(index, list)">
           </li>
         </ul>
       </div>

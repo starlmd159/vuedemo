@@ -4,14 +4,14 @@
     <div id='cate'>
       <ul v-bind="{style:'width:' + ulWidth + 'px'}">
         <li @click='getimages(0)'>全部</li>
-        <li v-for='item in cates' @click='getimages(item.id)'>{{item.title}}</li>
+        <li v-for='(item,index) in cates' :key="index" @click='getimages(item.id)'>{{item.title}}</li>
       </ul>
     </div>
     <!--图片列表-->
     <div id="imglist">
       <ul>
 
-          <li v-for="item in list">
+          <li v-for="(item,index) in list" :key="index">
             <router-link v-bind="{to:'/photo/photoinfo/'+item.id}">
             <img v-lazy="item.img_url">
             <div id="desc">

@@ -1,7 +1,7 @@
 <template>
   <div id='tmpl'>
     <ul class="mui-table-view">
-      <li v-for="item in list" class="mui-table-view-cell mui-media">
+      <li v-for="(item,index) in list" :key="index" class="mui-table-view-cell mui-media">
         <router-link v-bind="{to:'/news/newsinfo/'+item.id}">
           <img class="mui-media-object mui-pull-left" :src="item.img_url">
           <div class="mui-media-body">

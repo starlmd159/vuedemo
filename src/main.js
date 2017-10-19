@@ -12,7 +12,6 @@ import moment from 'moment'
 import axios from './axios'
 import VuePreview from 'vue-preview'
 
-
 Vue.config.productionTip = false
 Vue.use(mintUI)
 Vue.use(VuePreview)
