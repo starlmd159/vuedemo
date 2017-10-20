@@ -69,8 +69,8 @@ export default {
 #mui-content li {
   border: 1px solid rgba(0, 0, 0, 0.4);
   padding: 0px;
-  margin-left: 11px;
-  margin-top: 6px;
+  margin-left: 6px;
+  margin-top: 3px;
 }
 
 #mui-content .mui-media-body {
